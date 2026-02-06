@@ -4,13 +4,7 @@
 
             {% assign dir = trmnl.plugin_settings.custom_fields_values.dir %}
             {% assign limit = 2 %}
-
-            {%- comment -%}
-            Recommended: store "code|name" in the select value, e.g. "900309|MacArthur"
-            {%- endcomment -%}
-            {% assign stop_parts = trmnl.plugin_settings.custom_fields_values.stopcode | split: "|" %}
-            {% assign stopcode = stop_parts[0] %}
-            {% assign stopname = stop_parts[1] | default: "BART" %}
+            {% assign stopname = trmnl.plugin_settings.custom_fields_values.stopname %}
 
             {% assign visits = ServiceDelivery.StopMonitoringDelivery.MonitoredStopVisit %}
             {% if visits == nil or visits == empty %}
@@ -37,10 +31,6 @@
                 {% for v in visits %}
                 {% assign D = v.MonitoredVehicleJourney %}
 
-                {%- comment -%}
-                Filter out "ghost" entries: require LineRef, and then apply direction filter.
-                Liquid precedence is weird; do it nested to be safe.
-                {%- endcomment -%}
                 {% if D.LineRef %}
                 {% if dir == "" or D.DirectionRef == dir %}
 
@@ -55,11 +45,13 @@
                         {{ D.MonitoredCall.DestinationDisplay }}
                       </span>
                     </td>
+
                     <td>
                       <span class="label label--small">
                         {{ D.LineRef }}
                       </span>
                     </td>
+
                     <td>
                       <span class="label label--small text--right">
                         {{ t | date: "%s" | plus: 0 | minus: 28800 | date: "%-I:%M %p" }}
@@ -68,9 +60,7 @@
                 </tr>
 
                 {% assign shown = shown | plus: 1 %}
-                {% if shown >= limit %}
-                {% break %}
-                {% endif %}
+                {% if shown >= limit %}{% break %}{% endif %}
 
                 {% endif %}
                 {% endif %}

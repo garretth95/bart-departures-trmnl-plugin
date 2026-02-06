@@ -4,61 +4,115 @@
   required: true
   description: Request a token from <a href="https://511.org/open-data/token">511.org</a> and paste it here.
 
-- keyname: stopcode
+- keyname: stopname
   name: Station
   field_type: select
-  description: "Choose a BART station"
+  description: "Station name shown in the header"
   options:
-    # Label: "Parent Station Code|Station Name" (stored in value)
-    - Embarcadero: "901169|Embarcadero"
-    - Montgomery Street: "901209|Montgomery Street"
-    - Powell Street: "901309|Powell Street"
-    - Civic Center / UN Plaza: "901409|Civic Center / UN Plaza"
-    - 16th Street / Mission: "901509|16th Street / Mission"
-    - 24th Street / Mission: "901609|24th Street / Mission"
-    - Glen Park: "901709|Glen Park"
-    - Balboa Park: "901809|Balboa Park"
-    - Daly City: "901909|Daly City"
-    - West Oakland: "901109|West Oakland"
-    - 12th Street / Oakland City Center: "900109|12th Street / Oakland City Center"
-    - 19th Street Oakland: "900209|19th Street Oakland"
-    - MacArthur: "900309|MacArthur"
-    - Lake Merritt: "902109|Lake Merritt"
-    - Fruitvale: "902209|Fruitvale"
-    - Coliseum: "902309|Coliseum"
-    - San Leandro: "902409|San Leandro"
-    - Bay Fair: "902509|Bay Fair"
-    - Hayward: "902609|Hayward"
-    - South Hayward: "902709|South Hayward"
-    - Union City: "902809|Union City"
-    - Fremont: "902909|Fremont"
-    - Warm Springs / South Fremont: "909209|Warm Springs / South Fremont"
-    - Milpitas: "909409|Milpitas"
-    - Berryessa / North San Jose: "909509|Berryessa / North San Jose"
-    - West Dublin / Pleasanton: "905209|West Dublin / Pleasanton"
-    - Dublin / Pleasanton: "905309|Dublin / Pleasanton"
-    - North Berkeley: "904309|North Berkeley"
-    - Downtown Berkeley: "904209|Downtown Berkeley"
-    - Ashby: "904109|Ashby"
-    - Rockridge: "903109|Rockridge"
-    - Orinda: "903209|Orinda"
-    - Lafayette: "903309|Lafayette"
-    - Walnut Creek: "903409|Walnut Creek"
-    - Pleasant Hill / Contra Costa Centre: "903509|Pleasant Hill / Contra Costa Centre"
-    - Concord: "903609|Concord"
-    - North Concord / Martinez: "903709|North Concord / Martinez"
-    - Pittsburg / Bay Point: "903809|Pittsburg / Bay Point"
-    - Pittsburg Center: "908209|Pittsburg Center"
-    - Antioch: "908309|Antioch"
-    - El Cerrito Plaza: "904409|El Cerrito Plaza"
-    - El Cerrito Del Norte: "904509|El Cerrito Del Norte"
-    - Richmond: "904609|Richmond"
-    - South San Francisco: "906209|South San Francisco"
-    - San Bruno: "906309|San Bruno"
-    - San Francisco International Airport: "907109|San Francisco International Airport"
-    - Millbrae (Caltrain Transfer Platform): "906409|Millbrae (Caltrain Transfer Platform)"
-    - Oakland International Airport Station (OAK): "907409|Oakland International Airport Station (OAK)"
-  default: "901169|Embarcadero"
+    - Embarcadero: "Embarcadero"
+    - Montgomery Street: "Montgomery Street"
+    - Powell Street: "Powell Street"
+    - Civic Center / UN Plaza: "Civic Center / UN Plaza"
+    - 16th Street / Mission: "16th Street / Mission"
+    - 24th Street / Mission: "24th Street / Mission"
+    - Glen Park: "Glen Park"
+    - Balboa Park: "Balboa Park"
+    - Daly City: "Daly City"
+    - West Oakland: "West Oakland"
+    - 12th Street / Oakland City Center: "12th Street / Oakland City Center"
+    - 19th Street Oakland: "19th Street Oakland"
+    - MacArthur: "MacArthur"
+    - Lake Merritt: "Lake Merritt"
+    - Fruitvale: "Fruitvale"
+    - Coliseum: "Coliseum"
+    - San Leandro: "San Leandro"
+    - Bay Fair: "Bay Fair"
+    - Hayward: "Hayward"
+    - South Hayward: "South Hayward"
+    - Union City: "Union City"
+    - Fremont: "Fremont"
+    - Warm Springs / South Fremont: "Warm Springs / South Fremont"
+    - Milpitas: "Milpitas"
+    - Berryessa / North San Jose: "Berryessa / North San Jose"
+    - West Dublin / Pleasanton: "West Dublin / Pleasanton"
+    - Dublin / Pleasanton: "Dublin / Pleasanton"
+    - North Berkeley: "North Berkeley"
+    - Downtown Berkeley: "Downtown Berkeley"
+    - Ashby: "Ashby"
+    - Rockridge: "Rockridge"
+    - Orinda: "Orinda"
+    - Lafayette: "Lafayette"
+    - Walnut Creek: "Walnut Creek"
+    - Pleasant Hill / Contra Costa Centre: "Pleasant Hill / Contra Costa Centre"
+    - Concord: "Concord"
+    - North Concord / Martinez: "North Concord / Martinez"
+    - Pittsburg / Bay Point: "Pittsburg / Bay Point"
+    - Pittsburg Center: "Pittsburg Center"
+    - Antioch: "Antioch"
+    - El Cerrito Plaza: "El Cerrito Plaza"
+    - El Cerrito Del Norte: "El Cerrito Del Norte"
+    - Richmond: "Richmond"
+    - South San Francisco: "South San Francisco"
+    - San Bruno: "San Bruno"
+    - San Francisco International Airport: "San Francisco International Airport"
+    - Millbrae (Caltrain Transfer Platform): "Millbrae (Caltrain Transfer Platform)"
+    - Oakland International Airport Station (OAK): "Oakland International Airport Station (OAK)"
+  default: "Embarcadero"
+
+- keyname: stopcode
+  name: Station (API)
+  field_type: select
+  description: "Must match Station above — used only for fetching data"
+  options:
+    - Embarcadero: 901169
+    - Montgomery Street: 901209
+    - Powell Street: 901309
+    - Civic Center / UN Plaza: 901409
+    - 16th Street / Mission: 901509
+    - 24th Street / Mission: 901609
+    - Glen Park: 901709
+    - Balboa Park: 901809
+    - Daly City: 901909
+    - West Oakland: 901109
+    - 12th Street / Oakland City Center: 900109
+    - 19th Street Oakland: 900209
+    - MacArthur: 900309
+    - Lake Merritt: 902109
+    - Fruitvale: 902209
+    - Coliseum: 902309
+    - San Leandro: 902409
+    - Bay Fair: 902509
+    - Hayward: 902609
+    - South Hayward: 902709
+    - Union City: 902809
+    - Fremont: 902909
+    - Warm Springs / South Fremont: 909209
+    - Milpitas: 909409
+    - Berryessa / North San Jose: 909509
+    - West Dublin / Pleasanton: 905209
+    - Dublin / Pleasanton: 905309
+    - North Berkeley: 904309
+    - Downtown Berkeley: 904209
+    - Ashby: 904109
+    - Rockridge: 903109
+    - Orinda: 903209
+    - Lafayette: 903309
+    - Walnut Creek: 903409
+    - Pleasant Hill / Contra Costa Centre: 903509
+    - Concord: 903609
+    - North Concord / Martinez: 903709
+    - Pittsburg / Bay Point: 903809
+    - Pittsburg Center: 908209
+    - Antioch: 908309
+    - El Cerrito Plaza: 904409
+    - El Cerrito Del Norte: 904509
+    - Richmond: 904609
+    - South San Francisco: 906209
+    - San Bruno: 906309
+    - San Francisco International Airport: 907109
+    - Millbrae (Caltrain Transfer Platform): 906409
+    - Oakland International Airport Station (OAK): 907409
+  default: 901169
 
 - keyname: dir
   name: Direction
