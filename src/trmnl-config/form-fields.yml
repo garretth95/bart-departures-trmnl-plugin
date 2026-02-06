@@ -1,0 +1,77 @@
+- keyname: api_key
+  name: 511 API Key
+  field_type: password
+  required: true
+  description: Request a token from <a href="https://511.org/open-data/token">511.org</a> and paste it here.
+
+- keyname: stopcode
+  name: Station
+  field_type: select
+  description: "Choose a BART station"
+  options:
+    # Label: "Parent Station Code|Station Name" (stored in value)
+    - Embarcadero: "901169|Embarcadero"
+    - Montgomery Street: "901209|Montgomery Street"
+    - Powell Street: "901309|Powell Street"
+    - Civic Center / UN Plaza: "901409|Civic Center / UN Plaza"
+    - 16th Street / Mission: "901509|16th Street / Mission"
+    - 24th Street / Mission: "901609|24th Street / Mission"
+    - Glen Park: "901709|Glen Park"
+    - Balboa Park: "901809|Balboa Park"
+    - Daly City: "901909|Daly City"
+    - West Oakland: "901109|West Oakland"
+    - 12th Street / Oakland City Center: "900109|12th Street / Oakland City Center"
+    - 19th Street Oakland: "900209|19th Street Oakland"
+    - MacArthur: "900309|MacArthur"
+    - Lake Merritt: "902109|Lake Merritt"
+    - Fruitvale: "902209|Fruitvale"
+    - Coliseum: "902309|Coliseum"
+    - San Leandro: "902409|San Leandro"
+    - Bay Fair: "902509|Bay Fair"
+    - Hayward: "902609|Hayward"
+    - South Hayward: "902709|South Hayward"
+    - Union City: "902809|Union City"
+    - Fremont: "902909|Fremont"
+    - Warm Springs / South Fremont: "909209|Warm Springs / South Fremont"
+    - Milpitas: "909409|Milpitas"
+    - Berryessa / North San Jose: "909509|Berryessa / North San Jose"
+    - West Dublin / Pleasanton: "905209|West Dublin / Pleasanton"
+    - Dublin / Pleasanton: "905309|Dublin / Pleasanton"
+    - North Berkeley: "904309|North Berkeley"
+    - Downtown Berkeley: "904209|Downtown Berkeley"
+    - Ashby: "904109|Ashby"
+    - Rockridge: "903109|Rockridge"
+    - Orinda: "903209|Orinda"
+    - Lafayette: "903309|Lafayette"
+    - Walnut Creek: "903409|Walnut Creek"
+    - Pleasant Hill / Contra Costa Centre: "903509|Pleasant Hill / Contra Costa Centre"
+    - Concord: "903609|Concord"
+    - North Concord / Martinez: "903709|North Concord / Martinez"
+    - Pittsburg / Bay Point: "903809|Pittsburg / Bay Point"
+    - Pittsburg Center: "908209|Pittsburg Center"
+    - Antioch: "908309|Antioch"
+    - El Cerrito Plaza: "904409|El Cerrito Plaza"
+    - El Cerrito Del Norte: "904509|El Cerrito Del Norte"
+    - Richmond: "904609|Richmond"
+    - South San Francisco: "906209|South San Francisco"
+    - San Bruno: "906309|San Bruno"
+    - San Francisco International Airport: "907109|San Francisco International Airport"
+    - Millbrae (Caltrain Transfer Platform): "906409|Millbrae (Caltrain Transfer Platform)"
+    - Oakland International Airport Station (OAK): "907409|Oakland International Airport Station (OAK)"
+  default: "901169|Embarcadero"
+
+- keyname: dir
+  name: Direction
+  field_type: select
+  options:
+    - All: ""
+    - North: "N"
+    - South: "S"
+  default: ""
+
+- keyname: author_bio
+  name: About This Plugin
+  category: life,travel
+  field_type: author_bio
+  description: BART Departures was created by Garrett, an Oakland resident (gargar.sh on Discord)
+  github_url: https://github.com/garretth95

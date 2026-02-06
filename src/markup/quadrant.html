@@ -1,0 +1,126 @@
+<style>
+    .bart-wrapper {
+        font-family: Inter, sans-serif;
+    }
+
+    .bart-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .bart-title-line {
+        height: 2px;
+        width: 100%;
+        background: #555555;   /* solid black so it always shows */
+        margin-bottom: 14px;
+    }
+
+    .bart-table {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .bart-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .bart-header {
+        font-weight: 700;
+        border-bottom: 2px solid rgba(255,255,255,0.4);
+        padding-bottom: 6px;
+        margin-bottom: 6px;
+    }
+
+    .col-dest {
+        flex: 2;
+    }
+
+    .col-line {
+        flex: 1;
+        text-align: center;
+    }
+
+    .col-time {
+        flex: 1;
+        text-align: right;
+    }
+
+</style>
+
+<div class="layout">
+    <div class="columns">
+        <div class="column">
+            <div class="markdown bart-wrapper">
+                {% assign dir = trmnl.plugin_settings.custom_fields_values.dir %}
+                {% assign limit = trmnl.plugin_settings.custom_fields_values.limit | times: 1 %}
+                {% assign visits = ServiceDelivery.StopMonitoringDelivery.MonitoredStopVisit %}
+                {% if visits == nil or visits == empty %}
+                {% assign visits = ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit %}
+                {% endif %}
+
+                {% if visits and visits.size > 0 %}
+                {% for v in visits %}
+                {% if v.MonitoredVehicleJourney.LineRef != nil %}
+                {% assign stopname = v.MonitoredVehicleJourney.MonitoredCall.StopPointName %}
+                {% endif %}
+                {% endfor %}
+
+                <div class="bart-title">
+                    {{ stopname }} BART
+                </div>
+                <div class="bart-title-line"></div>
+
+                <div class="bart-table">
+
+                    <!-- Header row -->
+                    <div class="bart-row bart-header">
+                        <div class="col-dest">Destination</div>
+                        <div class="col-line">Line</div>
+                        <div class="col-time">Departs</div>
+                    </div>
+
+                    {% assign shown = 0 %}
+                    {% for v in visits %}
+                    {% assign D = v.MonitoredVehicleJourney %}
+                    {% assign t = D.MonitoredCall.ExpectedDepartureTime %}
+                    {% if t == nil or t == "" %}
+                    {% assign t = D.MonitoredCall.ExpectedArrivalTime %}
+                    {% endif %}
+
+                    {% if D.LineRef != nil and dir == "" or D.DirectionRef == dir %}
+
+                    <div class="bart-row">
+                        <div class="col-dest">
+                            {{ D.MonitoredCall.DestinationDisplay }}
+                        </div>
+
+                        <div class="col-line">
+                            {{ D.LineRef }}
+                        </div>
+
+                        <div class="col-time">
+                            {{ t | date: "%s" | plus: 0 | minus: 28800 | date: "%-I:%M %p" }}
+                        </div>
+                    </div>
+
+                    {% assign shown = shown | plus: 1 %}
+                    {% if shown >= limit %}{% break %}{% endif %}
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+
+                {% else %}
+                <div class="bart-title">BART</div>
+                <div class="bart-table">No upcoming trains</div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>

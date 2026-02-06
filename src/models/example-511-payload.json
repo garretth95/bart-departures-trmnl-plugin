@@ -1,0 +1,1262 @@
+{
+  "ServiceDelivery": {
+    "ResponseTimestamp": "2026-02-05T23:17:34Z",
+    "ProducerRef": "BA",
+    "Status": true,
+    "StopMonitoringDelivery": {
+      "version": "1.4",
+      "ResponseTimestamp": "2026-02-05T23:17:34Z",
+      "Status": true,
+      "MonitoredStopVisit": [
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842216"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "908302",
+            "DestinationName": "Antioch",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Antioch",
+              "AimedArrivalTime": "2026-02-05T23:20:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:21:18Z",
+              "AimedDepartureTime": "2026-02-05T23:21:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:21:42Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Orange-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842161"
+            },
+            "PublishedLineName": "Berryessa/North San Jose to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "909502",
+            "OriginName": "Berryessa / North San Jose",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-05T23:20:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:21:18Z",
+              "AimedDepartureTime": "2026-02-05T23:21:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:22:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842407"
+            },
+            "PublishedLineName": "Antioch to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "908302",
+            "OriginName": "Antioch",
+            "DestinationRef": "907101",
+            "DestinationName": "San Francisco International Airport",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "San Francisco International Airport",
+              "AimedArrivalTime": "2026-02-05T23:21:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:22:00Z",
+              "AimedDepartureTime": "2026-02-05T23:22:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:22:19Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Orange-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842349"
+            },
+            "PublishedLineName": "Richmond to Berryessa/North San Jose",
+            "OperatorRef": "BA",
+            "OriginRef": "904602",
+            "OriginName": "Richmond",
+            "DestinationRef": "909502",
+            "DestinationName": "Berryessa / North San Jose",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Berryessa/North San Jose",
+              "AimedArrivalTime": "2026-02-05T23:21:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:22:00Z",
+              "AimedDepartureTime": "2026-02-05T23:24:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:24:50Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Red-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1841858"
+            },
+            "PublishedLineName": "Richmond to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "904602",
+            "OriginName": "Richmond",
+            "DestinationRef": "906403",
+            "DestinationName": "Millbrae (Caltrain Transfer Platform)",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Millbrae",
+              "AimedArrivalTime": "2026-02-05T23:28:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:29:12Z",
+              "AimedDepartureTime": "2026-02-05T23:29:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:29:48Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842280"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "903801",
+            "DestinationName": "Pittsburg / Bay Point",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Pittsburg / Bay Point",
+              "AimedArrivalTime": "2026-02-05T23:29:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:29:36Z",
+              "AimedDepartureTime": "2026-02-05T23:29:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:30:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842465"
+            },
+            "PublishedLineName": "Antioch to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "903802",
+            "OriginName": "Pittsburg / Bay Point",
+            "DestinationRef": "907101",
+            "DestinationName": "San Francisco International Airport",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "San Francisco International Airport",
+              "AimedArrivalTime": "2026-02-05T23:33:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:33:54Z",
+              "AimedDepartureTime": "2026-02-05T23:34:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:34:30Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Red-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1841762"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l Airport SFO to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "906403",
+            "OriginName": "Millbrae (Caltrain Transfer Platform)",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-05T23:34:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:34:54Z",
+              "AimedDepartureTime": "2026-02-05T23:35:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:35:28Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842217"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "908302",
+            "DestinationName": "Antioch",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Antioch",
+              "AimedArrivalTime": "2026-02-05T23:40:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:41:18Z",
+              "AimedDepartureTime": "2026-02-05T23:41:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:41:42Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Orange-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842162"
+            },
+            "PublishedLineName": "Berryessa/North San Jose to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "909502",
+            "OriginName": "Berryessa / North San Jose",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-05T23:40:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:41:18Z",
+              "AimedDepartureTime": "2026-02-05T23:41:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:41:57Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Orange-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842350"
+            },
+            "PublishedLineName": "Richmond to Berryessa/North San Jose",
+            "OperatorRef": "BA",
+            "OriginRef": "904602",
+            "OriginName": "Richmond",
+            "DestinationRef": "909502",
+            "DestinationName": "Berryessa / North San Jose",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Berryessa/North San Jose",
+              "AimedArrivalTime": "2026-02-05T23:41:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:42:00Z",
+              "AimedDepartureTime": "2026-02-05T23:44:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:45:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842408"
+            },
+            "PublishedLineName": "Antioch to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "908302",
+            "OriginName": "Antioch",
+            "DestinationRef": "907101",
+            "DestinationName": "San Francisco International Airport",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "San Francisco International Airport",
+              "AimedArrivalTime": "2026-02-05T23:41:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:46:20Z",
+              "AimedDepartureTime": "2026-02-05T23:42:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:46:40Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Red-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1841859"
+            },
+            "PublishedLineName": "Richmond to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "904602",
+            "OriginName": "Richmond",
+            "DestinationRef": "906403",
+            "DestinationName": "Millbrae (Caltrain Transfer Platform)",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Millbrae",
+              "AimedArrivalTime": "2026-02-05T23:48:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:49:12Z",
+              "AimedDepartureTime": "2026-02-05T23:49:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:49:48Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842282"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "903801",
+            "DestinationName": "Pittsburg / Bay Point",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Pittsburg / Bay Point",
+              "AimedArrivalTime": "2026-02-05T23:49:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:49:36Z",
+              "AimedDepartureTime": "2026-02-05T23:49:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:50:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842466"
+            },
+            "PublishedLineName": "Antioch to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "903802",
+            "OriginName": "Pittsburg / Bay Point",
+            "DestinationRef": "907101",
+            "DestinationName": "San Francisco International Airport",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "San Francisco International Airport",
+              "AimedArrivalTime": "2026-02-05T23:53:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:53:54Z",
+              "AimedDepartureTime": "2026-02-05T23:54:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:54:30Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Red-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1841763"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l Airport SFO to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "906403",
+            "OriginName": "Millbrae (Caltrain Transfer Platform)",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-05T23:54:00Z",
+              "ExpectedArrivalTime": "2026-02-05T23:54:54Z",
+              "AimedDepartureTime": "2026-02-05T23:55:00Z",
+              "ExpectedDepartureTime": "2026-02-05T23:55:36Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842218"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "908302",
+            "DestinationName": "Antioch",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Antioch",
+              "AimedArrivalTime": "2026-02-06T00:00:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:01:18Z",
+              "AimedDepartureTime": "2026-02-06T00:01:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:01:42Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Orange-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842163"
+            },
+            "PublishedLineName": "Berryessa/North San Jose to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "909502",
+            "OriginName": "Berryessa / North San Jose",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-06T00:00:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:01:18Z",
+              "AimedDepartureTime": "2026-02-06T00:01:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:02:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842409"
+            },
+            "PublishedLineName": "Antioch to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "908302",
+            "OriginName": "Antioch",
+            "DestinationRef": "907101",
+            "DestinationName": "San Francisco International Airport",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "San Francisco International Airport",
+              "AimedArrivalTime": "2026-02-06T00:01:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:02:00Z",
+              "AimedDepartureTime": "2026-02-06T00:02:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:02:36Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Orange-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842351"
+            },
+            "PublishedLineName": "Richmond to Berryessa/North San Jose",
+            "OperatorRef": "BA",
+            "OriginRef": "904602",
+            "OriginName": "Richmond",
+            "DestinationRef": "909502",
+            "DestinationName": "Berryessa / North San Jose",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Berryessa/North San Jose",
+              "AimedArrivalTime": "2026-02-06T00:01:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:02:00Z",
+              "AimedDepartureTime": "2026-02-06T00:04:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:05:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Red-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1841860"
+            },
+            "PublishedLineName": "Richmond to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "904602",
+            "OriginName": "Richmond",
+            "DestinationRef": "906403",
+            "DestinationName": "Millbrae (Caltrain Transfer Platform)",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Millbrae",
+              "AimedArrivalTime": "2026-02-06T00:08:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:09:12Z",
+              "AimedDepartureTime": "2026-02-06T00:09:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:09:48Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842283"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "903801",
+            "DestinationName": "Pittsburg / Bay Point",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Pittsburg / Bay Point",
+              "AimedArrivalTime": "2026-02-06T00:09:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:09:36Z",
+              "AimedDepartureTime": "2026-02-06T00:09:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:10:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842467"
+            },
+            "PublishedLineName": "Antioch to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "903802",
+            "OriginName": "Pittsburg / Bay Point",
+            "DestinationRef": "907101",
+            "DestinationName": "San Francisco International Airport",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "San Francisco International Airport",
+              "AimedArrivalTime": "2026-02-06T00:13:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:13:54Z",
+              "AimedDepartureTime": "2026-02-06T00:14:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:14:30Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Red-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1841764"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l Airport SFO to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "906403",
+            "OriginName": "Millbrae (Caltrain Transfer Platform)",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-06T00:14:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:14:54Z",
+              "AimedDepartureTime": "2026-02-06T00:15:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:15:36Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842219"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "908302",
+            "DestinationName": "Antioch",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Antioch",
+              "AimedArrivalTime": "2026-02-06T00:20:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:21:18Z",
+              "AimedDepartureTime": "2026-02-06T00:21:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:21:42Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Orange-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842164"
+            },
+            "PublishedLineName": "Berryessa/North San Jose to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "909502",
+            "OriginName": "Berryessa / North San Jose",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-06T00:20:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:21:18Z",
+              "AimedDepartureTime": "2026-02-06T00:21:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:22:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842410"
+            },
+            "PublishedLineName": "Antioch to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "908302",
+            "OriginName": "Antioch",
+            "DestinationRef": "907101",
+            "DestinationName": "San Francisco International Airport",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "San Francisco International Airport",
+              "AimedArrivalTime": "2026-02-06T00:21:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:22:00Z",
+              "AimedDepartureTime": "2026-02-06T00:22:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:22:36Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842281"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "903801",
+            "DestinationName": "Pittsburg / Bay Point",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Pittsburg / Bay Point",
+              "AimedArrivalTime": "2026-02-06T00:29:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:29:36Z",
+              "AimedDepartureTime": "2026-02-06T00:29:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:30:00Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-S",
+            "DirectionRef": "S",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842468"
+            },
+            "PublishedLineName": "Antioch to SF Int'l Airport SFO/Millbrae",
+            "OperatorRef": "BA",
+            "OriginRef": "903802",
+            "OriginName": "Pittsburg / Bay Point",
+            "DestinationRef": "907101",
+            "DestinationName": "San Francisco International Airport",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "San Francisco International Airport",
+              "AimedArrivalTime": "2026-02-06T00:33:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:33:54Z",
+              "AimedDepartureTime": "2026-02-06T00:34:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:34:30Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Red-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1841765"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l Airport SFO to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "906403",
+            "OriginName": "Millbrae (Caltrain Transfer Platform)",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-06T00:34:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:34:54Z",
+              "AimedDepartureTime": "2026-02-06T00:35:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:35:36Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Yellow-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842220"
+            },
+            "PublishedLineName": "Millbrae/SF Int'l SFO to Antioch",
+            "OperatorRef": "BA",
+            "OriginRef": "907101",
+            "OriginName": "San Francisco International Airport",
+            "DestinationRef": "908302",
+            "DestinationName": "Antioch",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Antioch",
+              "AimedArrivalTime": "2026-02-06T00:40:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:41:18Z",
+              "AimedDepartureTime": "2026-02-06T00:41:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:41:42Z",
+              "Distances": ""
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "1970-01-01T00:00:00Z",
+          "MonitoringRef": "900309",
+          "MonitoredVehicleJourney": {
+            "LineRef": "Orange-N",
+            "DirectionRef": "N",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2026-02-05",
+              "DatedVehicleJourneyRef": "1842165"
+            },
+            "PublishedLineName": "Berryessa/North San Jose to Richmond",
+            "OperatorRef": "BA",
+            "OriginRef": "909502",
+            "OriginName": "Berryessa / North San Jose",
+            "DestinationRef": "904601",
+            "DestinationName": "Richmond",
+            "Monitored": true,
+            "InCongestion": null,
+            "VehicleLocation": {
+              "Longitude": "",
+              "Latitude": ""
+            },
+            "Bearing": null,
+            "Occupancy": null,
+            "VehicleRef": null,
+            "MonitoredCall": {
+              "StopPointRef": "900309",
+              "StopPointName": "MacArthur",
+              "VehicleLocationAtStop": "",
+              "VehicleAtStop": "",
+              "DestinationDisplay": "Richmond",
+              "AimedArrivalTime": "2026-02-06T00:40:00Z",
+              "ExpectedArrivalTime": "2026-02-06T00:41:18Z",
+              "AimedDepartureTime": "2026-02-06T00:41:00Z",
+              "ExpectedDepartureTime": "2026-02-06T00:42:00Z",
+              "Distances": ""
+            }
+          }
+        }
+      ]
+    }
+  }
+}
