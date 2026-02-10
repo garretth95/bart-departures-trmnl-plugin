@@ -2,74 +2,67 @@
     <div class="columns">
         <div class="column">
 
-            {% assign dir = trmnl.plugin_settings.custom_fields_values.dir %}
             {% assign limit = 7 %}
-            {% assign stopname = trmnl.plugin_settings.custom_fields_values.stopname %}
-
-            {% assign visits = ServiceDelivery.StopMonitoringDelivery.MonitoredStopVisit %}
-            {% if visits == nil or visits == empty %}
-            {% assign visits = ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit %}
-            {% endif %}
 
             <span class="title title--large">{{ stopname }} BART</span>
             <div class="divider"></div>
 
             {% if visits and visits.size > 0 %}
 
-            <table class="table table--base" data-table-limit="true">
-                <thead>
-                <tr>
-                    <th><span class="title title--small">Destination</span></th>
-                    <th><span class="title title--small">Line</span></th>
-                    <th><span class="title title--small text--right">Departs</span></th>
-                </tr>
-                </thead>
+                <table class="table table--base" data-table-limit="true">
+                    <thead>
+                    <tr>
+                        <th><span class="title title--small">Destination</span></th>
+                        <th><span class="title title--small">Line</span></th>
+                        <th><span class="title title--small text--right">Departs</span></th>
+                    </tr>
+                    </thead>
 
-                <tbody>
-                {% assign shown = 0 %}
+                    <tbody>
+                    {% assign shown = 0 %}
 
-                {% for v in visits %}
-                {% assign D = v.MonitoredVehicleJourney %}
+                    {% for v in visits %}
+                        {% assign D = v.MonitoredVehicleJourney %}
 
-                {% if D.LineRef %}
-                {% if dir == "" or D.DirectionRef == dir %}
+                        {% if D.LineRef %}
+                            {% if dir == "" or D.DirectionRef == dir %}
 
-                {% assign t = D.MonitoredCall.ExpectedDepartureTime %}
-                {% if t == nil or t == "" %}
-                {% assign t = D.MonitoredCall.ExpectedArrivalTime %}
-                {% endif %}
+                                {% assign t = D.MonitoredCall.ExpectedDepartureTime %}
+                                {% if t == blank %}
+                                    {% assign t = D.MonitoredCall.ExpectedArrivalTime %}
+                                {% endif %}
 
-                <tr>
-                    <td>
-                      <span class="label" data-clamp="1">
-                        {{ D.MonitoredCall.DestinationDisplay }}
-                      </span>
-                    </td>
+                                <tr>
+                                    <td>
+                              <span class="label" data-clamp="1">
+                                {{ D.MonitoredCall.DestinationDisplay }}
+                              </span>
+                                    </td>
 
-                    <td>
-                      <span class="label label--small">
-                        {{ D.LineRef }}
-                      </span>
-                    </td>
+                                    <td>
+                              <span class="">
+                                {{ D.LineRef }}
+                              </span>
+                                    </td>
 
-                    <td>
-                      <span class="label label--small text--right">
-                        {{ t | date: "%s" | plus: 0 | minus: 28800 | date: "%-I:%M %p" }}
-                      </span>
-                    </td>
-                </tr>
+                                    <td>
+                              <span class="text--right">
+                                {{ t | date: "%s" | plus: 0 | minus: 28800 | date: "%-I:%M %p" }}
+                              </span>
+                                    </td>
+                                </tr>
 
-                {% assign shown = shown | plus: 1 %}
-                {% if shown >= limit %}{% break %}{% endif %}
+                                {% assign shown = shown | plus: 1 %}
+                                {% if shown >= limit %}{% break %}{% endif %}
 
-                {% endif %}
-                {% endif %}
-                {% endfor %}
-                </tbody>
-            </table>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+                </table>
 
             {% else %}
-            <span class="label">No upcoming trains</span>
+                <span class="label">No upcoming trains</span>
             {% endif %}
 
         </div>
