@@ -53,6 +53,7 @@
 {% endcase %}
 
 {% assign dir = trmnl.plugin_settings.custom_fields_values.dir %}
+{% assign lines = trmnl.plugin_settings.custom_fields_values.lines %}
 
 {% assign visits = ServiceDelivery.StopMonitoringDelivery.MonitoredStopVisit %}
 {% if visits == blank %}

@@ -7,7 +7,7 @@ polling_verb: get
 framework_version: 2.3.7
 serverless_language: node
 refresh_interval_floor: ''
-polling_url: http://api.511.org/transit/StopMonitoring?api_key={{ api_key }}&agency=BA&stopcode={{ stopcode }}&format=json
+polling_url: https://api.511.org/transit/StopMonitoring?api_key={{ api_key }}&agency=BA&stopcode={{ stopcode }}&format=json
 polling_headers: ''
 polling_body: ''
 id: 180202
@@ -96,9 +96,22 @@ custom_fields:
   field_type: select
   options:
   - All: ''
-  - North: "N"
+  - North: N
   - South: S
   default: ''
+- keyname: lines
+  name: Line(s)
+  field_type: select
+  multiple: true
+  optional: true
+  description: Only show departures on these lines. Leave empty to show all lines.
+  options:
+  - Blue: Blue
+  - Green: Green
+  - Grey (OAK Airport): Grey
+  - Orange: Orange
+  - Red: Red
+  - Yellow: Yellow
 - keyname: author_bio
   name: About This Plugin
   category: life,travel
