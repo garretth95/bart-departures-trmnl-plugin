@@ -96,7 +96,7 @@ custom_fields:
   field_type: select
   options:
   - All: ''
-  - North: N
+  - North: "N"
   - South: S
   default: ''
 - keyname: lines
