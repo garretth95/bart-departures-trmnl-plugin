@@ -2,7 +2,7 @@
     <div class="columns">
         <div class="column">
 
-            {% if departures and departures.size > 0 %}
+            {% if shown_count > 0 %}
 
                 <table class="table table--small" data-table-limit="true">
                     <thead>
@@ -31,6 +31,8 @@
                     </tbody>
                 </table>
 
+            {% elsif departures and departures.size > 0 %}
+                <span class="label">No upcoming trains match your filters. Try adjusting Direction or Line(s) in settings.</span>
             {% else %}
                 <span class="label">No upcoming trains</span>
             {% endif %}
