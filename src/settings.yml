@@ -139,5 +139,5 @@ custom_fields:
   github_url: https://github.com/garretth95
   email_address: gargar@garrettheald.com
 name: BART Departures
-description: ''
+description: Live BART departures for your stop
 refresh_interval: 15
