@@ -82,7 +82,7 @@
 {% assign group_keys = "" %}
 {% for d in departures %}
     {% assign line_color = d.line | split: "-" | first %}
-    {% if dir == "" or d.dir == dir %}{% if lines == blank or lines contains line_color %}
+    {% if dir == "" or d.dir == dir %}{% if lines == blank or lines contains "all" or lines contains line_color %}
         {% assign shown_count = shown_count | plus: 1 %}
         {% assign shown_idx = shown_idx | append: forloop.index0 | append: "," %}
         {% assign group_token = "^" | append: d.dest | append: "|" | append: line_color | append: "^" %}

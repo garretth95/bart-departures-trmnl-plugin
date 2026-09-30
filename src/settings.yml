@@ -104,14 +104,16 @@ custom_fields:
   field_type: select
   multiple: true
   optional: true
-  description: Only show departures on these lines. Leave empty to show all lines.
+  description: Only show departures on these lines. Pick "All lines" to show every line.
   options:
+  - All lines: all
   - Blue: Blue
   - Green: Green
   - Grey (OAK Airport): Grey
   - Orange: Orange
   - Red: Red
   - Yellow: Yellow
+  default: all
 - keyname: layout
   name: Layout
   field_type: select
