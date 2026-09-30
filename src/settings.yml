@@ -1,0 +1,111 @@
+---
+strategy: polling
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: ''
+polling_verb: get
+framework_version: 2.3.7
+serverless_language: node
+refresh_interval_floor: ''
+polling_url: http://api.511.org/transit/StopMonitoring?api_key={{ api_key }}&agency=BA&stopcode={{ stopcode }}&format=json
+polling_headers: ''
+polling_body: ''
+id: 180202
+oauth_enabled: 'false'
+oauth_pkce_enabled: 'no'
+oauth_authorize_url: ''
+oauth_token_url: ''
+oauth_scopes: ''
+oauth_scope_separator: ''
+oauth_refresh_url: ''
+oauth_auth_params: ''
+oauth_token_headers: ''
+oauth_token_site: ''
+oauth_token_params: ''
+oauth_token_request_auth_method: ''
+oauth_body_format: ''
+oauth_token_response_metadata: ''
+oauth_authorization_method: ''
+oauth_refresh_params: ''
+oauth_token_field_name: ''
+oauth_expiry_field_name: ''
+oauth_expiry_strategy: ''
+oauth_fixed_expiry_ms: ''
+custom_fields:
+- keyname: api_key
+  name: 511 API Key
+  field_type: password
+  required: true
+  description: Request a token from <a href="https://511.org/open-data/token">511.org</a> and paste it here.
+- keyname: stopcode
+  name: BART Station
+  field_type: select
+  description: Choose which BART Station you'd like to display
+  options:
+  - 12th Street / Oakland City Center: 900109
+  - 16th Street / Mission: 901509
+  - 19th Street Oakland: 900209
+  - 24th Street / Mission: 901609
+  - Antioch: 908309
+  - Ashby: 904109
+  - Balboa Park: 901809
+  - Bay Fair: 902509
+  - Berryessa / North San Jose: 909509
+  - Civic Center / UN Plaza: 901409
+  - Coliseum: 902309
+  - Concord: 903609
+  - Daly City: 901909
+  - Downtown Berkeley: 904209
+  - Dublin / Pleasanton: 905309
+  - El Cerrito Del Norte: 904509
+  - El Cerrito Plaza: 904409
+  - Embarcadero: 901169
+  - Fremont: 902909
+  - Fruitvale: 902209
+  - Glen Park: 901709
+  - Hayward: 902609
+  - Lafayette: 903309
+  - Lake Merritt: 902109
+  - MacArthur: 900309
+  - Millbrae (Caltrain Transfer Platform): 906409
+  - Milpitas: 909409
+  - Montgomery Street: 901209
+  - North Berkeley: 904309
+  - North Concord / Martinez: 903709
+  - Oakland International Airport Station (OAK): 907409
+  - Orinda: 903209
+  - Pittsburg / Bay Point: 903809
+  - Pittsburg Center: 908209
+  - Pleasant Hill / Contra Costa Centre: 903509
+  - Powell Street: 901309
+  - Richmond: 904609
+  - Rockridge: 903109
+  - San Bruno: 906309
+  - San Francisco International Airport: 907109
+  - San Leandro: 902409
+  - South Hayward: 902709
+  - South San Francisco: 906209
+  - Union City: 902809
+  - Walnut Creek: 903409
+  - Warm Springs / South Fremont: 909209
+  - West Dublin / Pleasanton: 905209
+  - West Oakland: 901109
+  default: 901169
+- keyname: dir
+  name: Direction
+  field_type: select
+  options:
+  - All: ''
+  - North: "N"
+  - South: S
+  default: ''
+- keyname: author_bio
+  name: About This Plugin
+  category: life,travel
+  field_type: author_bio
+  description: BART Departures was created by Garrett, an Oakland resident (gargar.sh on Discord)
+  github_url: https://github.com/garretth95
+  email_address: gargar@garrettheald.com
+name: BART Departures
+description: ''
+refresh_interval: 15

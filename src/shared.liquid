@@ -1,0 +1,60 @@
+{% assign stopcode = trmnl.plugin_settings.custom_fields_values.stopcode %}
+
+{% case stopcode %}
+    {% when "900109" %}{% assign stopname = "12th Street / Oakland City Center" %}
+    {% when "901509" %}{% assign stopname = "16th Street / Mission" %}
+    {% when "900209" %}{% assign stopname = "19th Street Oakland" %}
+    {% when "901609" %}{% assign stopname = "24th Street / Mission" %}
+    {% when "908309" %}{% assign stopname = "Antioch" %}
+    {% when "904109" %}{% assign stopname = "Ashby" %}
+    {% when "901809" %}{% assign stopname = "Balboa Park" %}
+    {% when "902509" %}{% assign stopname = "Bay Fair" %}
+    {% when "909509" %}{% assign stopname = "Berryessa / North San Jose" %}
+    {% when "901409" %}{% assign stopname = "Civic Center / UN Plaza" %}
+    {% when "902309" %}{% assign stopname = "Coliseum" %}
+    {% when "903609" %}{% assign stopname = "Concord" %}
+    {% when "901909" %}{% assign stopname = "Daly City" %}
+    {% when "904209" %}{% assign stopname = "Downtown Berkeley" %}
+    {% when "905309" %}{% assign stopname = "Dublin / Pleasanton" %}
+    {% when "904509" %}{% assign stopname = "El Cerrito Del Norte" %}
+    {% when "904409" %}{% assign stopname = "El Cerrito Plaza" %}
+    {% when "901169" %}{% assign stopname = "Embarcadero" %}
+    {% when "902909" %}{% assign stopname = "Fremont" %}
+    {% when "902209" %}{% assign stopname = "Fruitvale" %}
+    {% when "901709" %}{% assign stopname = "Glen Park" %}
+    {% when "902609" %}{% assign stopname = "Hayward" %}
+    {% when "903309" %}{% assign stopname = "Lafayette" %}
+    {% when "902109" %}{% assign stopname = "Lake Merritt" %}
+    {% when "900309" %}{% assign stopname = "MacArthur" %}
+    {% when "906409" %}{% assign stopname = "Millbrae (Caltrain Transfer Platform)" %}
+    {% when "909409" %}{% assign stopname = "Milpitas" %}
+    {% when "901209" %}{% assign stopname = "Montgomery Street" %}
+    {% when "904309" %}{% assign stopname = "North Berkeley" %}
+    {% when "903709" %}{% assign stopname = "North Concord / Martinez" %}
+    {% when "907409" %}{% assign stopname = "Oakland International Airport Station (OAK)" %}
+    {% when "903209" %}{% assign stopname = "Orinda" %}
+    {% when "903809" %}{% assign stopname = "Pittsburg / Bay Point" %}
+    {% when "908209" %}{% assign stopname = "Pittsburg Center" %}
+    {% when "903509" %}{% assign stopname = "Pleasant Hill / Contra Costa Centre" %}
+    {% when "901309" %}{% assign stopname = "Powell Street" %}
+    {% when "904609" %}{% assign stopname = "Richmond" %}
+    {% when "903109" %}{% assign stopname = "Rockridge" %}
+    {% when "906309" %}{% assign stopname = "San Bruno" %}
+    {% when "907109" %}{% assign stopname = "San Francisco International Airport" %}
+    {% when "902409" %}{% assign stopname = "San Leandro" %}
+    {% when "902709" %}{% assign stopname = "South Hayward" %}
+    {% when "906209" %}{% assign stopname = "South San Francisco" %}
+    {% when "902809" %}{% assign stopname = "Union City" %}
+    {% when "903409" %}{% assign stopname = "Walnut Creek" %}
+    {% when "909209" %}{% assign stopname = "Warm Springs / South Fremont" %}
+    {% when "905209" %}{% assign stopname = "West Dublin / Pleasanton" %}
+    {% when "901109" %}{% assign stopname = "West Oakland" %}
+    {% else %}{% assign stopname = "BART" %}
+{% endcase %}
+
+{% assign dir = trmnl.plugin_settings.custom_fields_values.dir %}
+
+{% assign visits = ServiceDelivery.StopMonitoringDelivery.MonitoredStopVisit %}
+{% if visits == blank %}
+    {% assign visits = ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit %}
+{% endif %}
