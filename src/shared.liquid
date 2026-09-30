@@ -90,3 +90,6 @@
     {% endif %}{% endif %}
 {% endfor %}
 {% assign groups = group_keys | split: "^" %}
+
+{% comment %}0.0 at :00 to 1.0 at :59, so the decorative train moves across the screen each refresh{% endcomment %}
+{% assign train_pos = "now" | date: "%M" | times: 1.0 | divided_by: 59 | round: 3 %}
