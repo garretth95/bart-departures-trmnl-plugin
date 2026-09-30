@@ -1,33 +1,62 @@
+<style>
+    .bart-fit { width: 1%; white-space: nowrap; }
+    .bart-line { padding-right: 12px; }
+    .bart-time { text-align: right; }
+    .bart-dest { max-width: 0; width: 100%; }
+    .bart-dest .label { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+</style>
+
 <div class="layout layout--col layout--top layout--stretch pb--1">
     <div class="columns">
         <div class="column">
 
             {% if shown_count > 0 %}
 
-                <table class="table table--small" data-table-limit="true">
+                <table class="table {{ table_size }}" data-table-limit="true">
                     <thead>
                     <tr>
                         <th><span class="title title--small">Destination</span></th>
-                        <th><span class="title title--small">Line</span></th>
-                        <th><span class="title title--small text--right">Departs</span></th>
+                        <th class="bart-fit bart-line"><span class="title title--small">Line</span></th>
+                        <th class="bart-fit bart-time"><span class="title title--small">{% if layout == "grouped" %}Next Trains{% else %}Departs{% endif %}</span></th>
                     </tr>
                     </thead>
 
                     <tbody>
-                    {% for d in departures %}
-                        {% assign line_color = d.line | split: "-" | first %}
-                        {% if dir == "" or d.dir == dir %}{% if lines == blank or lines contains line_color %}
+                    {% if layout == "grouped" %}
+                        {% for g in groups %}{% if g != "" %}
+                            {% assign g_dest = g | split: "|" | first %}
+                            {% assign g_color = g | split: "|" | last %}
+                            {% assign g_times = "" %}
+                            {% assign g_n = 0 %}
+                            {% for d in departures %}
+                                {% capture tok %},{{ forloop.index0 }},{% endcapture %}
+                                {% assign d_color = d.line | split: "-" | first %}
+                                {% if g_n < 3 and shown_idx contains tok and d.dest == g_dest and d_color == g_color %}
+                                    {% assign t = d.time | date: "%s" | plus: trmnl.user.utc_offset | date: "%-I:%M" %}
+                                    {% if g_n > 0 %}{% assign g_times = g_times | append: " &middot; " %}{% endif %}
+                                    {% assign g_times = g_times | append: t %}
+                                    {% assign g_n = g_n | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}
                             <tr>
-                                <td><span class="label" data-clamp="1">{{ d.dest }}</span></td>
-                                <td><span class="label label--small">{{ d.line }}</span></td>
-                                <td>
-                    <span class="label label--small text--right">
-                      {{ d.time | date: "%s" | plus: trmnl.user.utc_offset | date: "%-I:%M %p" }}
-                    </span>
-                                </td>
+                                <td class="bart-dest"><span class="label {{ dest_size }}">{{ g_dest }}</span></td>
+                                <td class="bart-fit bart-line"><span class="label label--outline {{ meta_size }}">{{ g_color | upcase }}</span></td>
+                                <td class="bart-fit bart-time"><span class="label {{ meta_size }}">{{ g_times }}</span></td>
                             </tr>
-                        {% endif %}{% endif %}
-                    {% endfor %}
+                        {% endif %}{% endfor %}
+                    {% else %}
+                        {% for d in departures %}
+                            {% capture tok %},{{ forloop.index0 }},{% endcapture %}
+                            {% if shown_idx contains tok %}
+                                {% assign d_color = d.line | split: "-" | first %}
+                                <tr>
+                                    <td class="bart-dest"><span class="label {{ dest_size }}">{{ d.dest }}</span></td>
+                                    <td class="bart-fit bart-line"><span class="label label--outline {{ meta_size }}">{{ d_color | upcase }}</span></td>
+                                    <td class="bart-fit bart-time"><span class="label {{ meta_size }}">{{ d.time | date: "%s" | plus: trmnl.user.utc_offset | date: "%-I:%M %p" }}</span></td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
                     </tbody>
                 </table>
 
@@ -45,6 +74,6 @@
     <img class="image" src="https://raw.githubusercontent.com/garretth95/bart-departures-trmnl-plugin/refs/heads/main/train.png">
     <span class="title">BART Departures</span>
     <span class="instance">
-    {{ stopname }}{% if dir != "" %} ({{ dir }}){% endif %}
+    {{ stopname }}
   </span>
 </div>

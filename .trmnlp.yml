@@ -7,5 +7,9 @@ custom_fields:
   stopcode: "900309" # MacArthur
   dir: ""
   lines: Red
+  layout: list
+  text_size: small
 variables:
-  trmnl: {}
+  trmnl:
+    user:
+      utc_offset: -25200 # PDT; use -28800 for PST

@@ -112,6 +112,23 @@ custom_fields:
   - Orange: Orange
   - Red: Red
   - Yellow: Yellow
+- keyname: layout
+  name: Layout
+  field_type: select
+  description: List every departure, or group them by destination with the next few times on one row.
+  options:
+  - List: list
+  - Group by destination: grouped
+  default: list
+- keyname: text_size
+  name: Text Size
+  field_type: select
+  description: Larger text shows fewer departures.
+  options:
+  - Small: small
+  - Medium: medium
+  - Large: large
+  default: small
 - keyname: author_bio
   name: About This Plugin
   category: life,travel

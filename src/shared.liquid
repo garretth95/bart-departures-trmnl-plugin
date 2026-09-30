@@ -60,11 +60,33 @@
     {% assign visits = ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit %}
 {% endif %}
 
-{% comment %}count departures that pass the Direction / Line(s) filters{% endcomment %}
+{% assign layout = trmnl.plugin_settings.custom_fields_values.layout | default: "list" %}
+{% assign text_size = trmnl.plugin_settings.custom_fields_values.text_size | default: "small" %}
+
+{% case text_size %}
+    {% when "large" %}
+        {% assign table_size = "table--large" %}{% assign dest_size = "label--large" %}{% assign meta_size = "label--medium" %}
+    {% when "medium" %}
+        {% assign table_size = "table--base" %}{% assign dest_size = "label--medium" %}{% assign meta_size = "label--base" %}
+    {% else %}
+        {% assign table_size = "table--small" %}{% assign dest_size = "label--base" %}{% assign meta_size = "label--small" %}
+{% endcase %}
+
+{% comment %}
+    apply the Direction / Line(s) filters once:
+    shown_idx  ",0,3,5,"             indexes into departures that pass the filters
+    group_keys "^Richmond|Red^^..."  unique destination|line pairs, in departure order
+{% endcomment %}
 {% assign shown_count = 0 %}
+{% assign shown_idx = "," %}
+{% assign group_keys = "" %}
 {% for d in departures %}
     {% assign line_color = d.line | split: "-" | first %}
     {% if dir == "" or d.dir == dir %}{% if lines == blank or lines contains line_color %}
         {% assign shown_count = shown_count | plus: 1 %}
+        {% assign shown_idx = shown_idx | append: forloop.index0 | append: "," %}
+        {% assign group_token = "^" | append: d.dest | append: "|" | append: line_color | append: "^" %}
+        {% unless group_keys contains group_token %}{% assign group_keys = group_keys | append: group_token %}{% endunless %}
     {% endif %}{% endif %}
 {% endfor %}
+{% assign groups = group_keys | split: "^" %}
