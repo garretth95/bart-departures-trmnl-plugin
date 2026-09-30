@@ -38,7 +38,3 @@ This repo is kept in sync with TRMNL via the TRMNL GitHub sync, using the [trmnl
 - `src/full.liquid`, `src/half_horizontal.liquid`, `src/half_vertical.liquid`, `src/quadrant.liquid` – per-size markup
 - `.trmnlp.yml` – local preview config for `trmnlp serve`
 - `examples/example-511-payload.json` – sample 511 API response for reference
-
-## TODO
-
-- better half & quadrant markup
