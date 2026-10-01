@@ -140,4 +140,5 @@ custom_fields:
   email_address: gargar@garrettheald.com
 name: BART Departures
 description: Live BART departures for your stop
+recipe_overview: BART Departures shows upcoming Bay Area Rapid Transit trains for your station, using real-time data from 511.org. Each row shows the train's destination, its line and when it departs. This makes it easy to check your next train before you head out the door.
 refresh_interval: 15
