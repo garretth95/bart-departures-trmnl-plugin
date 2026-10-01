@@ -4,6 +4,19 @@
     .bart-time { text-align: right; }
     .bart-dest { max-width: 0; width: 100%; }
     .bart-dest .label { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    /* grouped: destination and times hug their content (capped), Line soaks up the leftover width */
+    .bart-grouped .bart-dest { max-width: none; width: 1%; padding-right: 12px; }
+    .bart-grouped .bart-dest .label { max-width: 40cqw; }
+    .bart-grouped .bart-line { width: auto; }
+    .bart-grouped .bart-time { text-align: left; }
+    .bart-times { width: 1%; white-space: nowrap; }
+    .bart-times__list { display: flex; flex-wrap: wrap; width: max-content; max-width: 45cqw; max-height: 1lh; overflow: hidden; }
+    .bart-t { white-space: nowrap; }
+    /* narrow views: exactly 3 times, destination fills whatever is left */
+    .view--half_vertical .bart-grouped .bart-dest, .view--quadrant .bart-grouped .bart-dest { max-width: 0; width: 100%; }
+    .view--half_vertical .bart-grouped .bart-dest .label, .view--quadrant .bart-grouped .bart-dest .label { max-width: none; }
+    .view--half_vertical .bart-times__list, .view--quadrant .bart-times__list { flex-wrap: nowrap; max-width: none; max-height: none; }
+    .view--half_vertical .bart-t:nth-child(n+4), .view--quadrant .bart-t:nth-child(n+4) { display: none; }
     .layout { row-gap: 0; }
     .layout > .columns { flex: 0 1 auto; min-height: 0; }
     .bart-lane { flex: 1 1 0; min-height: 0; overflow: hidden; display: flex; flex-direction: column; flex-wrap: wrap; justify-content: flex-end; align-content: flex-start; }
@@ -19,12 +32,12 @@
 
             {% if shown_count > 0 %}
 
-                <table class="table {{ table_size }}" data-table-limit="true">
+                <table class="table {{ table_size }} bart-{{ layout }}" data-table-limit="true">
                     <thead>
                     <tr>
                         <th><span class="title title--small">Destination</span></th>
                         <th class="bart-fit bart-line"><span class="title title--small">Line</span></th>
-                        <th class="bart-fit bart-time"><span class="title title--small">{% if layout == "grouped" %}Next Trains{% else %}Departs{% endif %}</span></th>
+                        <th class="{% if layout == "grouped" %}bart-times{% else %}bart-fit{% endif %} bart-time"><span class="title title--small">{% if layout == "grouped" %}Next Trains{% else %}Departs{% endif %}</span></th>
                     </tr>
                     </thead>
 
@@ -38,17 +51,18 @@
                             {% for d in departures %}
                                 {% capture tok %},{{ forloop.index0 }},{% endcapture %}
                                 {% assign d_color = d.line | split: "-" | first %}
-                                {% if g_n < 3 and shown_idx contains tok and d.dest == g_dest and d_color == g_color %}
+                                {% if g_n < 5 and shown_idx contains tok and d.dest == g_dest and d_color == g_color %}
                                     {% assign t = d.time | date: "%s" | plus: trmnl.user.utc_offset | date: "%-I:%M" %}
-                                    {% if g_n > 0 %}{% assign g_times = g_times | append: " &middot; " %}{% endif %}
-                                    {% assign g_times = g_times | append: t %}
+                                    {% assign g_times = g_times | append: '<span class="bart-t">' %}
+                                    {% if g_n > 0 %}{% assign g_times = g_times | append: "&nbsp;&middot;&nbsp;" %}{% endif %}
+                                    {% assign g_times = g_times | append: t | append: "</span>" %}
                                     {% assign g_n = g_n | plus: 1 %}
                                 {% endif %}
                             {% endfor %}
                             <tr>
                                 <td class="bart-dest"><span class="label {{ dest_size }}">{{ g_dest }}</span></td>
                                 <td class="bart-fit bart-line"><span class="label label--outline {{ meta_size }}">{{ g_color | upcase }}</span></td>
-                                <td class="bart-fit bart-time"><span class="label {{ meta_size }}">{{ g_times }}</span></td>
+                                <td class="bart-times bart-time"><span class="label {{ meta_size }} bart-times__list">{{ g_times }}</span></td>
                             </tr>
                         {% endif %}{% endfor %}
                     {% else %}

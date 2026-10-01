@@ -11,7 +11,7 @@ Settings let you tailor the display:
 
 - **Direction:** show all trains, or only northbound or southbound.
 - **Line(s):** show only the lines you ride, such as Red and Yellow, or keep "All lines."
-- **Layout:** list every departure in time order, or group by destination to see the next three trains for each route on a single row, similar to BART's platform signs.
+- **Layout:** list every departure in time order, or group by destination to see the next 3–5 trains for each route on a single row (as many as fit), similar to BART's platform signs.
 - **Text size:** Small, Medium or Large. Larger text is easier to read from across the room and shows fewer trains.
 
 The plugin works in full, half and quadrant layouts, so it fits alongside your other plugins in a mashup.

@@ -1,5 +1,5 @@
 function transform(input) {
-  const LIST_LIMIT = 25;
+  const LIST_LIMIT = 50;
 
   const visits =
     input?.ServiceDelivery?.StopMonitoringDelivery?.MonitoredStopVisit ?? [];
